@@ -7,6 +7,7 @@ Proyek ini mengimplementasikan aplikasi Virtual YouTuber (VTuber) berbasis real-
 ## Struktur Proyek
 
 ### File: tugas1.py
+<img width="671" height="447" alt="Screenshot 2025-12-02 012442" src="https://github.com/user-attachments/assets/e0bb7195-c37f-48be-9de5-274c1b4a0d1c" />
 
 **Fokus Utama: Kontrol Filter Video Real-time**
 
@@ -15,7 +16,7 @@ File ini berfokus pada integrasi efek visual (image filtering) pada video input 
 **Fungsionalitas Kunci:**
 
 1. **Implementasi Filter Gambar**
-   
+
    Menerapkan tiga jenis filter utama pada frame video:
    - Average Blur dengan toggle kernel 5x5 dan 9x9
    - Gaussian Blur diterapkan melalui konvolusi dengan cv2.filter2D()
@@ -34,6 +35,7 @@ File ini berfokus pada integrasi efek visual (image filtering) pada video input 
    Menangani tracking wajah dan pose tubuh untuk menggerakkan model Live2D.
 
 ### File: tugas2.py
+<img width="1013" height="914" alt="Screenshot 2025-12-02 014238" src="https://github.com/user-attachments/assets/6c0dec60-7432-48e4-a3d5-8529c2b3e0dc" />
 
 **Fokus Utama: Pemicu Aksi Otomatis Berdasarkan Deteksi Warna**
 
@@ -91,15 +93,29 @@ python tugas2.py
 
 **Tugas 1:**
 - 0: Mode Normal
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a62141ec-34b4-4d33-8b4c-d7aa8afbc1ed" />
+
 - 1: Average Blur
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f8bbf36f-a5a5-4732-b3df-ed9999a23a19" />
+
 - 2: Gaussian Blur
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1193dc77-b148-4ba2-b24c-b3238a3c3ac7" />
+
 - 3: Sharpening
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5116502-a14e-4cd1-b695-9f8d01cfffaf" />
+
 - S: Toggle Static/Dynamic Model
 - ESC: Keluar aplikasi
 
 **Tugas 2:**
 - S: Toggle Static/Dynamic Model
 - ESC: Keluar aplikasi
+  
 Fokus Utama: Pemicu Aksi Otomatis Berdasarkan Deteksi Warna.
 <img width="1280" height="720" alt="Saat Berwarna Biru" src="https://github.com/user-attachments/assets/35b89ffc-7413-47de-b02a-59cdfcb5189b" />
+> **Keterangan:** Objek berwarna Hijau berhasil dideteksi dan berhasil menggerakan mulut avatar.
+
+<img width="1208" height="668" alt="image" src="https://github.com/user-attachments/assets/d0bc42cd-798b-4589-b651-87fa4faf42d3" />
+> **Keterangan:** Objek berwarna Biru berhasil dideteksi dan berhasil menggerakan tangan avatar.
+
 
