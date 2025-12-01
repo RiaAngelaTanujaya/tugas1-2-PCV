@@ -1,0 +1,9 @@
+# Abaikan folder lingkungan virtual Python
+cv-env/
+live2d_env/
+
+# Abaikan file .whl yang merupakan installer package
+*.whl
+
+# Abaikan folder model jika sangat besar (optional, tapi disarankan)
+# model/
