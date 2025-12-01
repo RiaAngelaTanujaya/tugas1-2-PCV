@@ -101,4 +101,5 @@ python tugas2.py
 - S: Toggle Static/Dynamic Model
 - ESC: Keluar aplikasi
 Fokus Utama: Pemicu Aksi Otomatis Berdasarkan Deteksi Warna.
+<img width="1280" height="720" alt="Saat Berwarna Biru" src="https://github.com/user-attachments/assets/35b89ffc-7413-47de-b02a-59cdfcb5189b" />
 
