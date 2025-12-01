@@ -58,67 +58,6 @@ File ini berfokus pada penggunaan teknik image processing lanjutan untuk deteksi
    
    Mengintegrasikan pemicu deteksi warna ini secara langsung ke dalam loop aplikasi, sehingga model bereaksi secara otomatis terhadap lingkungan nyata.
 
-## Teknologi yang Digunakan
-
-- **OpenCV**: Pengambilan frame webcam dan image processing
-- **MediaPipe**: Framework machine learning untuk deteksi landmark wajah, pose, dan tangan
-- **Live2D SDK v3**: Rendering dan kontrol model avatar 2D
-- **Pygame**: Manajemen window dan event handling
-- **PyOpenGL**: Rendering grafis dan texture background
-- **NumPy**: Operasi matematis dan array processing
-
-## Fitur Tracking
-
-### Tracking Kepala
-- Rotasi Yaw (kiri-kanan)
-- Rotasi Pitch (atas-bawah)
-- Rotasi Roll (kemiringan)
-
-### Tracking Mata
-- Deteksi kedipan menggunakan Eye Aspect Ratio
-- Tracking posisi bola mata dan arah pandangan
-
-### Tracking Mulut
-- Deteksi apertura mulut berdasarkan jarak bibir
-
-### Tracking Tubuh
-- Body Tilt (kemiringan horizontal)
-- Body Roll (rotasi tubuh)
-- Body Pitch (gerakan maju-mundur)
-
-### Tracking Lengan
-- Parameter shoulder (gerakan naik-turun)
-- Parameter elbow (gerakan kiri-kanan)
-
-### Tracking Kaki
-- Deteksi posisi lutut untuk animasi kaki
-
-## Sistem Smoothing
-
-Seluruh parameter tracking menggunakan exponential moving average untuk menghaluskan gerakan:
-
-Formula: nilai_baru = alpha x nilai_raw + (1 - alpha) x nilai_lama
-
-Nilai alpha per parameter:
-- Parameter kepala: 0.4
-- Parameter mata: 0.6
-- Parameter bola mata: 0.2
-- Parameter tubuh: 0.2-0.3
-- Parameter lengan: 0.6
-- Parameter kaki: 0.4
-
-## Mode Operasi
-
-### Mode Statis
-Model tetap di posisi tengah dengan skala default. Hanya orientasi tubuh yang berubah tanpa pergerakan posisi 2D atau zoom.
-
-### Mode Dinamis
-Model dapat bergerak mengikuti pergerakan tubuh pengguna dengan fitur:
-- Translasi horizontal dan vertikal
-- Auto-zoom berdasarkan jarak dari kamera
-- Offset vertikal adaptif sesuai skala
-
-Toggle antara mode dilakukan dengan menekan tombol S.
 
 ## Cara Penggunaan
 
