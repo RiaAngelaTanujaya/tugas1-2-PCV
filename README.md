@@ -161,75 +161,16 @@ python tugas2.py
 **Tugas 2:**
 - S: Toggle Static/Dynamic Model
 - ESC: Keluar aplikasi
+Fokus Utama: Pemicu Aksi Otomatis Berdasarkan Deteksi Warna.
 
-## Kalibrasi Parameter
+Fungsionalitas Kunci:
+1. Deteksi Warna: Menerapkan proses deteksi objek berwarna Biru dan Hijau melalui langkah-langkah:
+   - Konversi HSV dan Thresholding Warna.
+   - Pembersihan Mask menggunakan operasi Morfologi (Opening dan Closing).
+   - Deteksi Kontur (cv2.findContours) untuk memvalidasi keberadaan objek.
+2. Aksi Pemicu: Memicu aksi berbeda pada model Live2D berdasarkan warna yang terdeteksi (Hijau memiliki prioritas lebih tinggi):
+   - Jika objek Biru terdeteksi, memicu gerakan Lengan (ParamArmLA01, ParamArmRA01).
+   - Jika objek Hijau terdeteksi, memicu ekspresi Buka Mulut (ParamA).
+3. Integrasi Otomatis: Mengintegrasikan pemicu deteksi warna ini secara langsung ke dalam loop aplikasi, sehingga model bereaksi secara otomatis terhadap lingkungan nyata
 
-### Eye Aspect Ratio
-- Maksimal (mata terbuka): 0.37
-- Minimal (mata tertutup): 0.15
 
-### Hand Tracking
-- Y minimum (tangan atas): 0.1
-- Y maksimum (tangan bawah): 0.8
-- X minimum (tangan kiri): 0.2
-- X maksimum (tangan kanan): 0.8
-
-### Knee Tracking
-- Y minimum: 0.5
-- Y maksimum: 0.9
-
-### Zoom System
-- Default shoulder depth: -0.5
-- Zoom sensitivity: 4.0
-- Scale range: 0.8 - 3.0
-
-## Performa
-
-- Target framerate: 30 FPS
-- Resolusi display: 640 x 480 pixels
-- MediaPipe model complexity: 1 (balanced)
-- Confidence threshold: 0.5
-
-## Limitasi
-
-1. Memerlukan pencahayaan yang baik untuk tracking optimal
-2. Tracking tangan bergantung pada visibility penuh
-3. Background harus kontras dengan subjek untuk pose detection yang akurat
-4. Memerlukan GPU untuk performa optimal pada rendering
-5. Model Live2D harus memiliki parameter ID yang sesuai
-
-## Pengembangan Masa Depan
-
-- Implementasi multi-model support
-- Recording dan playback motion data
-- Kalibrasi otomatis per user
-- Support untuk full body tracking dengan sensor tambahan
-- Integration dengan software streaming
-- Optimisasi performa untuk low-end hardware
-- Machine learning untuk prediksi gerakan
-- Support untuk ekspresi wajah yang lebih kompleks
-
-## Troubleshooting
-
-**Kamera tidak terdeteksi:**
-- Pastikan webcam terhubung dengan benar
-- Periksa apakah aplikasi lain sedang menggunakan kamera
-- Coba restart aplikasi
-
-**Model tidak bergerak:**
-- Periksa path model Live2D sudah benar
-- Pastikan parameter ID sesuai dengan model
-- Verifikasi pencahayaan cukup untuk detection
-
-**FPS rendah:**
-- Kurangi resolusi webcam
-- Tutup aplikasi lain yang berat
-- Gunakan GPU untuk rendering
-
-## Lisensi
-
-Proyek ini dibuat untuk keperluan akademis (Praktikum Computer Vision).
-
-## Kontributor
-
-Proyek ini dikembangkan sebagai bagian dari tugas mata kuliah Pengolahan Citra dan Visi (PCV).
