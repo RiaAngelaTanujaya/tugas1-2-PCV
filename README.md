@@ -102,14 +102,3 @@ python tugas2.py
 - ESC: Keluar aplikasi
 Fokus Utama: Pemicu Aksi Otomatis Berdasarkan Deteksi Warna.
 
-Fungsionalitas Kunci:
-1. Deteksi Warna: Menerapkan proses deteksi objek berwarna Biru dan Hijau melalui langkah-langkah:
-   - Konversi HSV dan Thresholding Warna.
-   - Pembersihan Mask menggunakan operasi Morfologi (Opening dan Closing).
-   - Deteksi Kontur (cv2.findContours) untuk memvalidasi keberadaan objek.
-2. Aksi Pemicu: Memicu aksi berbeda pada model Live2D berdasarkan warna yang terdeteksi (Hijau memiliki prioritas lebih tinggi):
-   - Jika objek Biru terdeteksi, memicu gerakan Lengan (ParamArmLA01, ParamArmRA01).
-   - Jika objek Hijau terdeteksi, memicu ekspresi Buka Mulut (ParamA).
-3. Integrasi Otomatis: Mengintegrasikan pemicu deteksi warna ini secara langsung ke dalam loop aplikasi, sehingga model bereaksi secara otomatis terhadap lingkungan nyata
-
-
